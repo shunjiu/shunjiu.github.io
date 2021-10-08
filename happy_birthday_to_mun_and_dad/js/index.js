@@ -44,7 +44,7 @@ S.Drawing = (function () {
                      window.oRequestAnimationFrame      ||
                      window.msRequestAnimationFrame     ||
                      function(callback) {
-                       window.setTimeout(callback, 1500 / 60);
+                       window.setTimeout(callback, 1000 / 60);
                      };
 
   return {
@@ -171,7 +171,7 @@ S.UI = (function () {
             } else {
               S.Shape.switchShape(S.ShapeBuilder.letter(index), true);
             }
-          }, 2000, value, true);
+          }, 1500, value, true);
           break;
 
         case 'rectangle':
@@ -199,7 +199,7 @@ S.UI = (function () {
                 time = t;
                 S.Shape.switchShape(S.ShapeBuilder.letter(time));
               }
-            }, 2000);
+            }, 1500);
           }
           break;
 
